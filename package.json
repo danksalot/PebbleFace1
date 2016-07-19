@@ -1,13 +1,13 @@
 {
-    "author": "danksalot2000@yahoo.com",
+    "author": "www.JacobDanks.com",
     "dependencies": {},
     "keywords": [],
-    "name": "testface1",
+    "name": "yeoman",
     "pebble": {
         "capabilities": [
             ""
         ],
-        "displayName": "TestWatchFace1",
+        "displayName": "Yeoman",
         "enableMultiJS": true,
         "messageKeys": [],
         "projectType": "native",
