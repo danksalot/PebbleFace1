@@ -1,7 +1,9 @@
 #include <pebble.h>
 
 static Window *s_main_window;
+static BitmapLayer *s_bitmap_layer;
 static TextLayer *s_time_layer;
+static GBitmap *s_bitmap;
 
 // Settings
 bool animations_flag;
@@ -27,10 +29,16 @@ static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
 static void main_window_load(Window *window) {
   // Get information about the Window
   Layer *window_layer = window_get_root_layer(window);
-  GRect bounds = layer_get_bounds(window_layer);
+  GRect bounds = layer_get_bounds(window_layer);  
+  
+  s_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_YEOMAN_IDENTIFIER);
+  s_bitmap_layer = bitmap_layer_create(GRect(0, 5, 143, 125));
+  bitmap_layer_set_compositing_mode(s_bitmap_layer, GCompOpSet);
+  bitmap_layer_set_bitmap(s_bitmap_layer, s_bitmap);
+  layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_bitmap_layer));
 
   // Create the TextLayer with specific bounds
-  s_time_layer = text_layer_create(GRect(0, PBL_IF_ROUND_ELSE(58, 102), bounds.size.w, 50));
+  s_time_layer = text_layer_create(GRect(0, 120, bounds.size.w, 50));
 
   // Improve the layout to be more like a watchface
   window_set_background_color(s_main_window, background_color);
@@ -45,6 +53,10 @@ static void main_window_load(Window *window) {
 }
 
 static void main_window_unload(Window *window) {
+  // Destroy Bitmap layer
+  gbitmap_destroy(s_bitmap);
+  bitmap_layer_destroy(s_bitmap_layer);
+  
   // Destroy TextLayer
   text_layer_destroy(s_time_layer);
 }
