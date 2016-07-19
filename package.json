@@ -1,6 +1,8 @@
 {
     "author": "www.JacobDanks.com",
-    "dependencies": {},
+    "dependencies": {
+        "pebble-clay": "^1.0.2"
+    },
     "keywords": [],
     "name": "yeoman",
     "pebble": {
@@ -9,7 +11,11 @@
         ],
         "displayName": "Yeoman",
         "enableMultiJS": true,
-        "messageKeys": [],
+        "messageKeys": [
+            "BackgroundColor",
+            "TextColor",
+            "Animations"
+        ],
         "projectType": "native",
         "resources": {
             "media": [
