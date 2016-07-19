@@ -1,0 +1,29 @@
+{
+    "author": "danksalot2000@yahoo.com",
+    "dependencies": {},
+    "keywords": [],
+    "name": "testface1",
+    "pebble": {
+        "capabilities": [
+            ""
+        ],
+        "displayName": "TestWatchFace1",
+        "enableMultiJS": true,
+        "messageKeys": [],
+        "projectType": "native",
+        "resources": {
+            "media": []
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk"
+        ],
+        "uuid": "037a191b-ebae-4e89-affb-7d2e7e17d683",
+        "watchapp": {
+            "watchface": true
+        }
+    },
+    "version": "1.0.0"
+}
