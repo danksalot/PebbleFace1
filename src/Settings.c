@@ -8,7 +8,6 @@ ClaySettings settings;
 void default_settings() {
   settings.BackgroundColor = GColorVividCerulean;
   settings.TextColor = GColorBlack;
-  settings.Animations = false;
 }
 
 // Read settings from persistent storage
@@ -24,7 +23,5 @@ ClaySettings load_settings() {
 // Save the settings to persistent storage
 void save_settings() {
   persist_write_data(SETTINGS_KEY, &settings, sizeof(settings));
-  // Update the display based on new settings
-  //update_display();
 }
 

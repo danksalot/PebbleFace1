@@ -25,12 +25,6 @@ static void inbox_received_handler(DictionaryIterator *iter, void *context) {
     settings.TextColor = GColorFromHEX(txt_color_t->value->int32);
   }
   
-  // Read boolean preferences
-  Tuple *animations_t = dict_find(iter, MESSAGE_KEY_Animations);
-  if(animations_t) {
-    settings.Animations = animations_t->value->int32 == 1;
-  }
-  
   save_settings();
   update_display();
 }
@@ -102,8 +96,8 @@ static void init() {
     .unload = main_window_unload
   });
 
-  // Show the Window on the watch, with configured animations_flag
-  window_stack_push(s_main_window, settings.Animations);
+  // Show the Window on the watch, with animations
+  window_stack_push(s_main_window, true);
 
   // Make sure the time is displayed from the start
   update_time();

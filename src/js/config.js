@@ -29,21 +29,6 @@ module.exports = [
     ]
   },
   {
-    "type": "section",
-    "items": [
-      {
-        "type": "heading",
-        "defaultValue": "More Settings"
-      },
-      {
-        "type": "toggle",
-        "messageKey": "Animations",
-        "label": "Enable Animations",
-        "defaultValue": true
-      }
-    ]
-  },
-  {
     "type": "submit",
     "defaultValue": "Save Settings"
   }

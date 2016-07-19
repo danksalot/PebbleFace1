@@ -6,7 +6,6 @@
 typedef struct ClaySettings {
   GColor BackgroundColor;
   GColor TextColor;
-  bool Animations;
 } __attribute__((__packed__)) ClaySettings;
 
 void default_settings();

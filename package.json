@@ -13,8 +13,7 @@
         "enableMultiJS": true,
         "messageKeys": [
             "BackgroundColor",
-            "TextColor",
-            "Animations"
+            "TextColor"
         ],
         "projectType": "native",
         "resources": {
