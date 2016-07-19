@@ -57,9 +57,6 @@ static void main_window_load(Window *window) {
   Layer *window_layer = window_get_root_layer(window);
   GRect bounds = layer_get_bounds(window_layer); 
   
-  // Setup the Window
-  //window_set_background_color(s_main_window, settings.BackgroundColor);
-  
   // Create and format the bitmap layer
   s_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_YEOMAN_IDENTIFIER);
   s_bitmap_layer = bitmap_layer_create(GRect(5, 5, 143, 125));
@@ -70,7 +67,6 @@ static void main_window_load(Window *window) {
   // Create and format the TextLayer with specific bounds
   s_time_layer = text_layer_create(GRect(0, 120, bounds.size.w, 50));  
   text_layer_set_background_color(s_time_layer, GColorClear);
-  //text_layer_set_text_color(s_time_layer, settings.TextColor);
   text_layer_set_text(s_time_layer, "00:00");
   text_layer_set_font(s_time_layer, fonts_get_system_font(FONT_KEY_BITHAM_42_BOLD));
   text_layer_set_text_alignment(s_time_layer, GTextAlignmentCenter);
