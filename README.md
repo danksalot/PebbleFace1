@@ -8,4 +8,4 @@ Here's a screenshot:
 
 ![Alt text](/Screenshot.png?raw=true "Screenshot")
 
-Configuration is available in the app for BackgroundColor and TextColor.  Any of the 64 available colors can be used for each.
+Configuration is available in the app for BackgroundColor and TextColor.  Any of the 64 available colors can be used for each setting.
